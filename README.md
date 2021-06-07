@@ -1,6 +1,6 @@
 # Game21
 
-Bir iskambil destesinde bulunan kartların özellikleri bir takımlarının olması ve numaralarının olmasıdır. Takımlar ve numaralar her zaman sabittir bu yüzden onları enum olarak tanımladım.
+Bir iskambil destesinde bulunan kartların özellikleri bir takımlarının olması ve numaralarının olmasıdır. Takımlar ve numaralar her zaman sabittir bu yüzden onları enum olarak tanımladım.</br>
 Farklı oyunlarda bu kartlar farklı anlamlar taşıyabilir. Örneğin 21 oyununda her bir kartın value değeri vardır. Bunun için card sınıfını base alan yeni bir sınıf oluşturdum ve constructorda kartların numaralarına göre alacakları değerleri belirledim.
 Örneğin:
 ACE 1 ve 11
