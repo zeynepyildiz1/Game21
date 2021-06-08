@@ -17,6 +17,7 @@ namespace Game21
 
             Deck<Game21Card> deck2 = new Deck<Game21Card>();
             var deckList2 = deck2.createDeck();
+            deckList2 = deck2.Shuffle(deckList2);
             foreach (var item in deckList2)
             {
                 Console.WriteLine("Kart " + item.Suit + " " + item.CardNumber + " degeri " + string.Join(",", item.Values));

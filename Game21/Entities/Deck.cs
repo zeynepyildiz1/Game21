@@ -27,10 +27,11 @@ namespace Game21.Entities
 
         }
 
-        public void Shuffle()
+        public List<TCard> Shuffle(List<TCard> Cards)
         {
             Cards = Cards.OrderBy(c => Guid.NewGuid())
                          .ToList();
+            return Cards;
         }
 
         public TCard TakeCard()
