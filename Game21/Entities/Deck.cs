@@ -27,7 +27,7 @@ namespace Game21.Entities
 
         }
 
-        public List<TCard> Shuffle(List<TCard> Cards)
+        public List<TCard> Shuffle()
         {
             Cards = Cards.OrderBy(c => Guid.NewGuid())
                          .ToList();
@@ -36,20 +36,10 @@ namespace Game21.Entities
 
         public TCard TakeCard()
         {
-            var card = Cards.FirstOrDefault();
+            var card = Cards.LastOrDefault();
             Cards.Remove(card);
 
             return card;
         }
 
-        public IEnumerable<TCard> TakeCards(int numberOfCards)
-        {
-            var cards = Cards.Take(numberOfCards);
-
-            var takeCards = cards as TCard[] ?? cards.ToArray();
-            Cards.RemoveAll(takeCards.Contains);
-
-            return takeCards;
-            }
-        }
 }
