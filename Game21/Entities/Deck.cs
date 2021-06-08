@@ -13,9 +13,13 @@ namespace Game21.Entities
         }
 
         public List<TCard> Cards { get; set; }
+        public List<TCard> getDeck()
+        {
+            return Cards;
+        }
         public List<TCard> createDeck()
         {
-            TCard t = new TCard();
+           TCard t = new TCard();
            Cards = Enumerable.Range(1, 4)
                 .SelectMany(s => Enumerable.Range(1, 13)
                                     .Select(c => (TCard)Activator.CreateInstance(typeof(TCard), (Suit)s, (CardNumber)c)))

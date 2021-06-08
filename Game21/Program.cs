@@ -7,15 +7,15 @@ namespace Game21
         static void Main(string[] args)
         {
             Deck<Card> deck1 = new Deck<Card>();
-            var deckList1 = deck1.createDeck();
+            var deckList1 = deck1.getDeck();
             foreach (var item in deckList1)
             {
                 Console.WriteLine("Kart " + item.Suit + " " + item.CardNumber);
             }
             Console.WriteLine("Kart sayisi: " + deckList1.Count);
             Deck<Game21Card> deck2 = new Deck<Game21Card>();
-            var deckList2 = deck2.createDeck();
-            deckList2 = deck2.Shuffle();
+            var deckList2 = deck2.Shuffle();
+            
             foreach (var item in deckList2)
             {
                 Console.WriteLine("Kart " + item.Suit + " " + item.CardNumber + " degeri " + string.Join(",", item.Values));
