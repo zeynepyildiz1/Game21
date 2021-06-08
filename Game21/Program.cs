@@ -13,8 +13,6 @@ namespace Game21
                 Console.WriteLine("Kart " + item.Suit + " " + item.CardNumber);
             }
             Console.WriteLine("Kart sayisi: " + deckList1.Count);
-
-
             Deck<Game21Card> deck2 = new Deck<Game21Card>();
             var deckList2 = deck2.createDeck();
             deckList2 = deck2.Shuffle();

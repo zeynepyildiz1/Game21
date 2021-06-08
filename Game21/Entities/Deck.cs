@@ -13,9 +13,6 @@ namespace Game21.Entities
         }
 
         public List<TCard> Cards { get; set; }
-
-   
-        
         public List<TCard> createDeck()
         {
             TCard t = new TCard();
@@ -38,8 +35,7 @@ namespace Game21.Entities
         {
             var card = Cards.LastOrDefault();
             Cards.Remove(card);
-
             return card;
         }
-
+        }
 }
