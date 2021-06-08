@@ -17,14 +17,14 @@ namespace Game21.Entities
         {
             return Cards;
         }
-        public List<TCard> createDeck()
+        public void createDeck()
         {
            TCard t = new TCard();
            Cards = Enumerable.Range(1, 4)
                 .SelectMany(s => Enumerable.Range(1, 13)
                                     .Select(c => (TCard)Activator.CreateInstance(typeof(TCard), (Suit)s, (CardNumber)c)))
                    .ToList();
-            return Cards;
+          
 
         }
 
